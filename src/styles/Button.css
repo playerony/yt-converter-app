@@ -1,0 +1,31 @@
+.button {
+  padding: 10px;
+  margin: 10px;
+  flex-basis: 20%;
+  height: 60px;
+  border: 0;
+  top: 0;
+  position: relative;
+  box-shadow: 0px 6px rgba(53, 59, 72, 0.5);
+  font-size: 25px;
+  background: #353b48;
+  color: #ffffff;
+  user-select: none;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border-radius: 7px;
+}
+
+.button:hover {
+  background: #242a37;
+  cursor: pointer;
+  box-shadow: 0px 6px rgba(43, 49, 42, 0.5);
+  color: #fd3432;
+}
+
+.button:active {
+  box-shadow: 0px 0px rgba(48, 98, 141, 0.5);
+  top: 6px;
+}

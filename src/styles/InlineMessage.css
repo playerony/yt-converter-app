@@ -1,0 +1,16 @@
+.alert {
+  padding: 20px;
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.error {
+  background-color: #f44336;
+}
+
+.info {
+  background-color: #2196F3;
+}

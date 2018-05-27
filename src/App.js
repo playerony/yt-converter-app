@@ -5,6 +5,9 @@ import configureStore from './configureStore'
 import DownloadVideoPage from './containers/DownloadVideoPage'
 import Navbar from './components/Navbar'
 import './styles/App.css'
+import './styles/Button.css'
+import './styles/Container.css'
+import './styles/Input.css'
 
 const store = configureStore()
 
