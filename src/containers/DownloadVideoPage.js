@@ -58,11 +58,11 @@ class DownloadVideoPage extends Component {
           (!isVideoDownloadFetching && Object.keys(videoUrls).length > 0 ? <VideoThumbnail videoDetails={details.details} videoUrls={videoUrls}/> : this.renderLoading()))
         : 
           <div>
-              {Object.keys(videoDownloadError).length > 0 ?
-                  this.renderError(videoDownloadError) 
-              :
-                  this.renderError()
-              }
+            {Object.keys(videoDownloadError).length > 0 ?
+              this.renderError(videoDownloadError) 
+            :
+              this.renderError()
+            }
           </div>
         }
       </div>
