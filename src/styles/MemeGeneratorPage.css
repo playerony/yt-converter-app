@@ -1,0 +1,13 @@
+main{
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  width: 70%;
+}
+
+.highlight {
+  color: #c23616;
+}

@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { Switch, Route } from 'react-router-dom'
 import configureStore from './configureStore'
 import DownloadVideoPage from './containers/DownloadVideoPage'
+import MemeGeneratorPage from './containers/MemeGeneratorPage' 
 import PhotoGallery from './containers/PhotoGallery'
 import Navbar from './components/Navbar'
 import './styles/App.css'
@@ -20,6 +21,7 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path='/' component={DownloadVideoPage} />
+            <Route path='/memeGenerator' component={MemeGeneratorPage} />
             <Route path='/photoGallery' component={PhotoGallery} />
           </Switch>
         </div>
