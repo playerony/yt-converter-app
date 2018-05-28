@@ -1,0 +1,50 @@
+.container .options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .options select {
+  flex-basis: 100%;
+  height: 65px;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+  font-size: 21px;
+  line-height: 40px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  padding-left: 15px;
+  letter-spacing: 1px;
+  color: #333333;
+  margin: 10px;
+}
+
+.container .options button {
+  flex-basis: 28%;
+  height: 59px;
+  border: 0;
+  top: 0;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0px 6px rgba(53, 59, 72, 0.5);
+  font-size: 25px;
+  background: #353b48;
+  color: #ffffff;
+  user-select: none;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.container .options select:focus, .container .options button:focus {
+  outline: none;
+}
+
+.container .options button:hover {
+  background: #242a37;
+  cursor: pointer;
+  box-shadow: 0px 6px rgba(43, 49, 42, 0.5);
+  color: #353b48;
+}
