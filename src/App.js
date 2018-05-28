@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import configureStore from './configureStore'
 import DownloadVideoPage from './containers/DownloadVideoPage'
 import MemeGeneratorPage from './containers/MemeGeneratorPage' 
+import PhotoEditor from './containers/PhotoEditor'
 import PhotoGallery from './containers/PhotoGallery'
 import Navbar from './components/Navbar'
 import './styles/App.css'
@@ -22,6 +23,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={DownloadVideoPage} />
             <Route path='/memeGenerator' component={MemeGeneratorPage} />
+            <Route path='/photoEditor' component={PhotoEditor} />
             <Route path='/photoGallery' component={PhotoGallery} />
           </Switch>
         </div>

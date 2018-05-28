@@ -8,10 +8,10 @@ class Image extends Component {
 
     return (
       <img className="thumbnails" 
-           alt={`picture${this.props.value}`}
-           onClick={this.props.onClick} 
-           value={this.props.value} 
-           src={this.props.source} />
+           alt={`picture${value}`}
+           onClick={onClick} 
+           value={value} 
+           src={source} />
     )
   }
 }
