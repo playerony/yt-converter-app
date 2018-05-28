@@ -1,0 +1,12 @@
+.thumbnails {
+  width: 100px;
+  height: 100px;
+  margin: 10px 5px 20px 5px;
+  justify-content: center;
+  text-align: center;
+  border: solid 5px black;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
