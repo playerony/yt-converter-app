@@ -1,0 +1,19 @@
+.player {
+  margin: auto;
+  width: 50%;
+}
+
+.container .mainSection .videoSection {
+  width: 50%;
+  display: flex;
+  float: left;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.container .mainSection .screenSection {
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+}
