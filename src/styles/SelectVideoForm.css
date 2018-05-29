@@ -1,0 +1,123 @@
+.highlight {
+  color: #58B19F;
+}
+
+.main {
+  width: 70%;
+  border: 3px solid #dddddd;
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.main h1 {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 400;
+  border-bottom: 2px solid #58B19F;
+}
+
+.main form {
+  margin: 50px auto;
+}
+
+.main form h1 {
+  font-size: 30px;
+  border: 0;
+}
+
+.main form input {
+  width: 95%;
+  height: 30px;
+  margin: 5px auto;
+  display: block;
+}
+
+.main form select {
+  width: 95%;
+  height: 30px;
+  margin: 5px auto;
+  display: block;
+}
+
+.main form p {
+  width: 95%;
+  margin: 5px auto;
+}
+
+.fileContainer {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.main .download h1 {
+  border: 0;
+  font-size: 30px;
+  margin: 30px;
+}
+
+.fileContainer [type=file] {
+  cursor: inherit;
+  filter: alpha(opacity=0);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.fileContainer, form button, .main .download a {
+  text-decoration: none;
+  display: block;
+  width: 95%;
+  margin: 20px auto;
+  background-color: #58B19F;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 3px;
+  position: relative;
+  top: 0;
+  box-shadow: 0 6px rgba(88, 177, 159, 0.5); 
+  transition: all 0.2s ease;
+  font-size: 20px;
+  outline: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fileContainer:hover, form button:hover, .main .download a:hover {
+  background-color: #47A08E;
+  box-shadow: 0 6px rgba(71, 160, 142, 0.5);
+}
+
+.fileContainer:active, form button:active, .main .download a:active {
+  top: 6px;
+  box-shadow: 0 0px rgba(71, 160, 142, 0.5);
+}
+
+form button:disabled {
+  background-color: #CAD3C8;
+  box-shadow: 0 6px rgba(202, 211, 200, 0.5);
+}
+
+.loader {
+  margin: 100px auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #58B19F; 
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
