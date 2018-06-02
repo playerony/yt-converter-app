@@ -5,6 +5,7 @@ import configureStore from './configureStore'
 import DownloadVideoPage from './containers/DownloadVideoPage'
 import VideoEditorPage from './containers/VideoEditorPage'
 import MemeGeneratorPage from './containers/MemeGeneratorPage' 
+import GifGeneratorPage from './containers/GifGeneratorPage'
 import PhotoEditor from './containers/PhotoEditor'
 import PhotoGallery from './containers/PhotoGallery'
 import Navbar from './components/Navbar'
@@ -24,6 +25,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={DownloadVideoPage} />
             <Route path='/videoEditor' component={VideoEditorPage} />
+            <Route path='/gifGenerator' component={GifGeneratorPage} />
             <Route path='/memeGenerator' component={MemeGeneratorPage} />
             <Route path='/photoEditor' component={PhotoEditor} />
             <Route path='/photoGallery' component={PhotoGallery} />

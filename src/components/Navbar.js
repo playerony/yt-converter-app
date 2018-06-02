@@ -20,8 +20,8 @@ class Navbar extends Component {
           </Link>
         </li>
         <li>
-          <Link className="text" to='/videoConverter'>
-            Video converter
+          <Link className="text" to='/gifGenerator'>
+            Gif generator
           </Link>
         </li>
         <li>
