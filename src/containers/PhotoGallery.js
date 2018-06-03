@@ -4,7 +4,7 @@ import photos from '../utils/PhotoGalleryUtils'
 import InlineMessage from '../components/InlineMessage'
 
 class PhotoGallery extends Component {
-  renderError() {
+  renderMessage() {
     return <InlineMessage message="There are no photos to show"
                           className="info" />
   }
@@ -16,7 +16,7 @@ class PhotoGallery extends Component {
           {photos.length > 0 ?
             <Gallery photos={photos} margin={15} />
           :
-            this.renderError()
+            this.renderMessage()
           }
         </div>
       </div>

@@ -6,8 +6,8 @@ import InlineMessage from '../components/InlineMessage'
 import PhotoEditorCanvas from '../components/PhotoEditorCanvas'
 import PhotoEditorEffect from '../components/PhotoEditorEffect'
 import images from '../utils/ImageLoader'
-import '../styles/PhotoEditor.css'
 import '../styles/Selector.css'
+import '../styles/PhotoEditor.css'
 
 class PhotoEditor extends Component {
   constructor() {
@@ -218,7 +218,7 @@ class PhotoEditor extends Component {
     })
   }
 
-  renderError() {
+  renderMessage() {
     return <InlineMessage text="There are no photos to edit"
                           className="error" />
   }
@@ -297,11 +297,11 @@ class PhotoEditor extends Component {
                                    onCheckboxChange={this.onSepiaCheckboxChange}
                                    onRangeChange={this.onSepiaRangeChange} />
               </div>
-              <Button onClick={() => this.handleSaveButtonClick()} name="generat"/>
+              <Button onClick={() => this.handleSaveButtonClick()} name="generate"/>
             </div>
           </div>
         :
-          this.renderError()
+          this.renderMessage()
         }
       </main>
     )

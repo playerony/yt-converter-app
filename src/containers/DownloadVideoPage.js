@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchVideoDownloadUrls, resetVideoDownloadUrls, fetchVideoDetailsByUrl } from '../actions/youtube.action'
+import { fetchVideoDownloadUrls, 
+         resetVideoDownloadUrls, 
+         fetchVideoDetailsByUrl 
+} from '../actions/youtube.action'
 import SearchBar from '../components/SearchBar'
 import InlineMessage from '../components/InlineMessage'
 import VideoThumbnail from './VideoThumbnail'
@@ -25,7 +28,10 @@ class DownloadVideoPage extends Component {
     dispatch(fetchVideoDownloadUrls(videoUrl))
     dispatch(fetchVideoDetailsByUrl(videoUrl))
 
-    this.setState({ loadingForVideo: true, videoUrl })
+    this.setState({ 
+      loadingForVideo: true, 
+      videoUrl 
+    })
   }
 
   renderLoading() {
@@ -38,7 +44,7 @@ class DownloadVideoPage extends Component {
                           className="error" />
   }
 
-  renderError(errorMessage) {
+  renderMessage(errorMessage) {
     if(errorMessage.includes('<a href'))
       errorMessage = errorMessage.split('<a href').shift()
 
@@ -59,7 +65,7 @@ class DownloadVideoPage extends Component {
         : 
           <div>
             {Object.keys(videoDownloadError).length > 0 ?
-              this.renderError(videoDownloadError) 
+              this.renderMessage(videoDownloadError) 
             :
               this.renderError()
             }

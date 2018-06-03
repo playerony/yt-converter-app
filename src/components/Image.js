@@ -8,7 +8,7 @@ class Image extends Component {
 
     return (
       <img className="thumbnails" 
-           alt={`picture${value}`}
+           alt={`${value}`}
            onClick={onClick} 
            value={value} 
            src={source} />

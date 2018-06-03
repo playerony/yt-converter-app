@@ -7,10 +7,12 @@ class PhotoEditorEffect extends Component {
     const { onCheckboxChange, onRangeChange, effectName, min, max, step, value } = this.props
 
     return (
-      <div className='effectComponent'>
-        <input type='checkbox' className='checkbox' onChange={onCheckboxChange} />
+      <div className="effectComponent">
+        <input type="checkbox" className="checkbox" onChange={onCheckboxChange} />
         <h1>{effectName}</h1>
-        <input type='range' className='slider' name='points' min={min} max={max} step={step} defaultValue={value} onChange={this.props.onRangeChange} />
+        <input type="range" className="slider" name="points"
+               min={min} max={max} step={step} defaultValue={value} 
+               onChange={onRangeChange} />
       </div>
     )
   }

@@ -6,6 +6,7 @@ import Button from '../components/Button'
 import InlineMessage from '../components/InlineMessage'
 import images from '../utils/ImageLoader'
 import '../styles/MemeGeneratorPage.css'
+import '../styles/Button.css'
 
 class MemeGeneratorPage extends Component {
   constructor() {
@@ -59,7 +60,7 @@ class MemeGeneratorPage extends Component {
     })
   }
 
-  renderError() {
+  renderMessage() {
     return <InlineMessage message="There are no memes to edit"
                           className="error" />
   }
@@ -77,12 +78,12 @@ class MemeGeneratorPage extends Component {
                               key={index} />
               })}
             </div>
-            <div className="editSection">
+            <div>
               <MemeGeneratorCanvas image={images[this.state.indexOfImage]} 
                                     topText={this.state.topText.toUpperCase()} 
                                     bottomText={this.state.bottomText.toUpperCase()}/>
             </div>
-            <div className="filterSection">
+            <div>
               <input className="input" maxLength="60" value={this.state.topText} onChange={this.handleTopInputChange} placeholder='top text' type='text'/>
               <Button onClick={() => this.resetInput("top")} name="clear"/>
               <input className="input" maxLength="60" value={this.state.bottomText} onChange={this.handleBottomInputChange} placeholder='bottom text'  type='text'/>
@@ -91,7 +92,7 @@ class MemeGeneratorPage extends Component {
             </div>
           </div>
         :
-          this.renderError()
+          this.renderMessage()
         }
       </main>
     )
