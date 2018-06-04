@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import fileDownload from 'react-file-download'
+import onConvertVideo from '../utils/VideoConvertUtils'
 import { Player, 
   ControlBar, 
   PlaybackRateMenuButton, 
@@ -22,7 +22,6 @@ class VideoConverterPage extends Component {
       convertTo: 'mp4'
     }
 
-    this.poll = this.poll.bind(this)
     this.onChange = this.onChange.bind(this);
     this.onConvert = this.onConvert.bind(this);
     this.onVideoSelect = this.onVideoSelect.bind(this)
@@ -42,50 +41,7 @@ class VideoConverterPage extends Component {
   }
 
   onConvert() {
-    var zencoder = require('zencoder')
-    var client = new zencoder('7c22d96003d38db4878c4470e6f91cbd')
-
-    let thisHandle = this;
-
-    client.Job.create({
-      input: `http://127.0.0.1:5000/videos/${this.state.videoFileName}`, 
-      outputs: [
-        {
-          format: thisHandle.state.convertTo,
-          url: `s3://zen-tests/awesome-movie.${thisHandle.state.convertTo}`
-        }
-      ]
-    }, function(err, data) {
-      if (err) { console.log(err); return; }
-
-      thisHandle.poll(data)
-    })
-  }
-
-  poll(data) {
-    let Zencoder = require('zencoder')
-    let client = new Zencoder('7c22d96003d38db4878c4470e6f91cbd')
-
-    console.log(data)
-
-    let thisHandle = this
-
-    setTimeout(function(){
-      client.Job.progress(data.id, function(err, res) {
-        if (err) { console.log("OH NO! There was an error"); return err; }
-        if (res.state === 'waiting') {
-          console.log("Waiting")
-          thisHandle.poll(data)
-        } else if (res.state === 'processing') {
-          var progress = Math.round(res.progress * 100) / 100;
-          console.log(`Progress: ${progress}`)
-          thisHandle.poll(data)
-        } else if (res.state === 'finished') {
-          console.log('Job finished!')
-          fileDownload(data.url, `${new Date()}.${thisHandle.state.convertTo}`)
-        }
-      }, 5000)
-    })
+    onConvertVideo(this.state.videoFileName, this.state.convertTo)
   }
 
   render() {
