@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import onConvertVideo from '../utils/VideoConvertUtils'
-import { Player, 
+import {
+  Player, 
   ControlBar, 
   PlaybackRateMenuButton, 
   VolumeMenuButton,
@@ -22,8 +23,8 @@ class VideoConverterPage extends Component {
       convertTo: 'mp4'
     }
 
-    this.onChange = this.onChange.bind(this);
-    this.onConvert = this.onConvert.bind(this);
+    this.onChange = this.onChange.bind(this)
+    this.onConvert = this.onConvert.bind(this)
     this.onVideoSelect = this.onVideoSelect.bind(this)
   }
 

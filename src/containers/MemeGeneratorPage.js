@@ -80,8 +80,8 @@ class MemeGeneratorPage extends Component {
             </div>
             <div>
               <MemeGeneratorCanvas image={images[this.state.indexOfImage]} 
-                                    topText={this.state.topText.toUpperCase()} 
-                                    bottomText={this.state.bottomText.toUpperCase()}/>
+                                   topText={this.state.topText.toUpperCase()} 
+                                   bottomText={this.state.bottomText.toUpperCase()}/>
             </div>
             <div>
               <input className="input" maxLength="60" value={this.state.topText} onChange={this.handleTopInputChange} placeholder='top text' type='text'/>

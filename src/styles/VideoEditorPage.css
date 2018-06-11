@@ -3,17 +3,49 @@
   width: 50%;
 }
 
-.container .mainSection .videoSection {
+.container .mainSection {
   width: 50%;
+  margin: 0 auto;
+}
+
+.container .mainSection .button {
+  width: 40%;
+  margin: 20px;
+}
+
+.container .mainSection .videoSection {
   display: flex;
-  float: left;
   justify-content: space-between;
-  padding: 5px;
 }
 
 .container .mainSection .screenSection {
-  width: 50%;
-  float: left;
   display: flex;
+  width: 50%;
   justify-content: space-between;
+  margin-top: -80px;
+  position: relative;
+  left: 300px;
+  top: 100px;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container .mainSection .screenSection {
+    left: 200px;
+    top: 100px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container .mainSection .screenSection {
+    left: 100px;
+    top: 75px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container .mainSection .screenSection {
+    left: 0px;
+    top: 75px;
+  }
 }

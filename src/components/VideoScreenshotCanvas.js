@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
+import defaultImage from '../assets/noimage.jpeg'
 
 class VideoScreenshotCanvas extends Component {
   constructor(props){
@@ -13,9 +14,10 @@ class VideoScreenshotCanvas extends Component {
 
   componentDidMount(){
     this.canvas = document.getElementById('canvas')
-    this.canvas.width = 500
-    this.canvas.height = 300
-    this.ctx = this.canvas.getContext('2d')
+    this.canvas.width = 300
+    this.canvas.height = 180
+    
+    this.ctx = this.canvas.getContext("2d")
 
     this.update()
   }
@@ -27,8 +29,11 @@ class VideoScreenshotCanvas extends Component {
   update() {
     if(this.props.frame !== null) {
       this.ctxImage.src = this.props.frame.dataUri
-      this.redrawCanvas()
+    } else {
+      this.ctxImage.src = defaultImage
     }
+
+    this.redrawCanvas()
   }
     
   redrawCanvas(){

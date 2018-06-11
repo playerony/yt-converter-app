@@ -53,7 +53,8 @@ class SearchBar extends Component {
     return (
       <div>
         <form className="searchBarForm" onSubmit={this.onSubmit}>
-          <input className='input' type='text' name='url' value={this.state.url} onChange={this.onChange} placeholder="Paste youtube link here..."/>
+          <input className='input' type='text' name='url' value={this.state.url} 
+                 onChange={this.onChange} placeholder="Paste youtube link here..."/>
           <Button name='Find' />
         </form>
 

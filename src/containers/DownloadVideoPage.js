@@ -53,7 +53,7 @@ class DownloadVideoPage extends Component {
   }
 
   render() {
-    const { videoUrls, videoDownloadError, isVideoDownloadError, isVideoDownloadFetching, details } = this.props
+    const { videoUrls, videoDownloadError } = this.props
 
     return (
       <div>
@@ -61,7 +61,13 @@ class DownloadVideoPage extends Component {
 
         { !isVideoDownloadError ?
           (this.state.loadingForVideo === true && 
-          (!isVideoDownloadFetching && Object.keys(videoUrls).length > 0 ? <VideoThumbnail videoDetails={details.details} videoUrls={videoUrls}/> : this.renderLoading()))
+          (!isVideoDownloadFetching && Object.keys(videoUrls).length > 0 
+            ? 
+              <VideoThumbnail videoDetails={details.details} videoUrls={videoUrls}/> 
+            : 
+              this.renderLoading()
+          )
+          )
         : 
           <div>
             {Object.keys(videoDownloadError).length > 0 ?

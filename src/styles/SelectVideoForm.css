@@ -1,51 +1,5 @@
 .highlight {
-  color: #58B19F;
-}
-
-.main {
-  width: 70%;
-  border: 3px solid #dddddd;
-  background-color: #ffffff;
-  margin: 100px auto;
-  padding: 10px;
-  border-radius: 3px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
-.main h1 {
-  text-align: center;
-  font-size: 55px;
-  font-weight: 400;
-  border-bottom: 2px solid #58B19F;
-}
-
-.main form {
-  margin: 50px auto;
-}
-
-.main form h1 {
-  font-size: 30px;
-  border: 0;
-}
-
-.main form input {
-  width: 95%;
-  height: 30px;
-  margin: 5px auto;
-  display: block;
-}
-
-.main form select {
-  width: 95%;
-  height: 30px;
-  margin: 5px auto;
-  display: block;
-}
-
-.main form p {
-  width: 95%;
-  margin: 5px auto;
+  color: #f88e86;
 }
 
 .fileContainer {
@@ -77,14 +31,14 @@
   display: block;
   width: 95%;
   margin: 20px auto;
-  background-color: #58B19F;
+  background-color: #f44336;
   text-align: center;
   color: #ffffff;
   padding: 10px;
   border-radius: 3px;
   position: relative;
   top: 0;
-  box-shadow: 0 6px rgba(88, 177, 159, 0.5); 
+  box-shadow: 0 6px #f88e86; 
   transition: all 0.2s ease;
   font-size: 20px;
   outline: 0;
@@ -93,13 +47,13 @@
 }
 
 .fileContainer:hover, form button:hover, .main .download a:hover {
-  background-color: #47A08E;
-  box-shadow: 0 6px rgba(71, 160, 142, 0.5);
+  background-color: #f44336;
+  box-shadow: 0 6px #f88e86;
 }
 
 .fileContainer:active, form button:active, .main .download a:active {
   top: 6px;
-  box-shadow: 0 0px rgba(71, 160, 142, 0.5);
+  box-shadow: 0 0px #f88e86;
 }
 
 form button:disabled {
@@ -110,7 +64,7 @@ form button:disabled {
 .loader {
   margin: 100px auto;
   border: 16px solid #f3f3f3;
-  border-top: 16px solid #58B19F; 
+  border-top: 16px solid #f44336; 
   border-radius: 50%;
   width: 150px;
   height: 150px;

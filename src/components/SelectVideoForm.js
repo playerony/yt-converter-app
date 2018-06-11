@@ -32,10 +32,10 @@ class SelectVideoForm extends Component {
           <label htmlFor="file" className="fileContainer">
             Choose a file
             <input type="file"
-                    name="selectedFile"
-                    className="button"
-                    onChange={this.onChange}
-                    accept=".ogg,.ogv"
+                   name="selectedFile"
+                   className="button"
+                   onChange={this.onChange}
+                   accept=".ogg,.ogv"
             />
           </label>
         </div>

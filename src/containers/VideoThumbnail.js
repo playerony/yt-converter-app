@@ -73,8 +73,8 @@ class VideoTumbnail extends Component {
 }
 
 VideoTumbnail.propTypes = {
-    videoDetails: PropTypes.object.isRequired,
-    videoInfo: PropTypes.array.isRequired
+  videoDetails: PropTypes.object.isRequired,
+  videoInfo: PropTypes.array.isRequired
 }
 
 export default VideoTumbnail

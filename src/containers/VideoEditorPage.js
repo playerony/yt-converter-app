@@ -62,6 +62,10 @@ class VideoEditorPage extends Component {
         :
           <div>
             <main className="mainSection">
+              <div className="screenSection">
+                <VideoScreenshotCanvas frame={this.state.frame} />
+              </div>
+
               <div className="videoSection">
                 <Player ref="player" className="player" autoplay playsInline fluid={false} width={500} height={300}>
                   <source src={this.state.video} />
@@ -74,14 +78,10 @@ class VideoEditorPage extends Component {
                   </ControlBar>
                 </Player>
               </div>
-
-              <div className="screenSection">
-                <VideoScreenshotCanvas frame={this.state.frame} />
-              </div>
+              
+              <Button onClick={this.onClick} name="Screenshot" />
+              <Button onClick={this.onScreenshotSaveClick} name="Save" />
             </main>
-
-            <Button onClick={this.onClick} name="Screenshot" />
-            <Button onClick={this.onScreenshotSaveClick} name="Save" />
           </div>
         }
       </div>

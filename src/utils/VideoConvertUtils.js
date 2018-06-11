@@ -12,7 +12,10 @@ export default function onConvert(fileName, convertTo) {
       }
     ]
   }, function(err, data) {
-    if (err) { console.log(err); return; }
+    if (err) { 
+      console.log(err)
+      return
+    }
 
     poll(data, convertTo)
   })
@@ -23,9 +26,10 @@ function poll(data, convertTo) {
     client.Job.progress(data.id, function(err, res) {
       if (err) { console.log("There was an error"); return err; }
       if (res.state === 'waiting') {
-        console.log("Waiting")
+        console.log("In queue")
         poll(data, convertTo)
       } else if (res.state === 'processing') {
+        console.log(res.progress)
         var progress = Math.round(res.progress * 100) / 100;
         console.log(`Progress: ${progress}`)
         poll(data, convertTo)
